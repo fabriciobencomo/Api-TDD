@@ -22,7 +22,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json($this->post->paginate(), 200);
     }
 
     /**
@@ -56,4 +56,5 @@ class PostController extends Controller
 
         return response()->json(null, 204);
     }
+
 }
